@@ -4,6 +4,8 @@
 <br><br>
 <p align="center">
     <h1 align="center">Mohamed Ahmed Abdullah</h1>
+    <img src="https://avatars3.githubusercontent.com/u/3133201?s=460&u=408682a64f1e71349aec6a724f7e755913c1afa5&v=4" style="border-radius: 360px;margin: auto;
+    display: table;width: 110px;" />
     <p align="center">A repo for my personal blog.</p>
 
 </p>
