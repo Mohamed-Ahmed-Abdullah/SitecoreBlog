@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Sitecore Blog
+title: Just the Docs
 description: A Jekyll theme for documentation
-baseurl: "/Home" # the subpath of your site, e.g. /blog
-url: "https://mohamed-ahmed-abdullah.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
+url: "https://pmarsceill.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
@@ -62,6 +62,11 @@ search:
 # Enable or disable heading anchors
 heading_anchors: true
 
+# Aux links for the upper right navigation
+aux_links:
+  "Just the Docs on GitHub":
+    - "//github.com/pmarsceill/just-the-docs"
+
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
 
@@ -73,19 +78,19 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 # appears at the bottom of every page's main content
 
 # Back to top link
-back_to_top: false
+back_to_top: true
 back_to_top_text: "Back to top"
 
-# footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
-last_edit_timestamp: flase # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
 
 
 # Footer "Edit this page on GitHub" link text
-gh_edit_link: false # show or hide edit this page link
+gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
