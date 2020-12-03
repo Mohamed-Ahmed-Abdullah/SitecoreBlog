@@ -4,7 +4,7 @@ title: Sitecore Forms Customization
 nav_order: 2
 ---
 
-# Configuration
+# Sitecore Forms Customization
 {: .no_toc }
 
 My goal in this task was to create a custom layout for the sitecore forms as you can see in the picture
