@@ -26,11 +26,12 @@ My goal in this task was to create a custom layout for the sitecore forms as you
 
 The main Idea is that you drag a form element from the left panel and drop it in the middle to create a form field. then you attach this form to a content item to render it, finally when the user submit the form you can configure some action, in this case it will be send email. 
 
-[SitecoreFormsImage2]
+<img style="width:400px;margin: auto;display: block;" 
+     src="/SitecoreBlog/assets/images/3d22fd22-f60c-40e0-95d5-d64515ab996a.png">
 
 Take a quick look at [sitecore article](https://doc.sitecore.com/developers/91/sitecore-experience-manager/en/walkthrough--creating-a-custom-submit-action.html), we will discuss more details here 
 
-[SitecoreFormsImage3]
+![](/SitecoreBlog/assets/images/4f1bf06d-9acf-43b2-bba1-24015a89cb32.png)
 
 To create new control you need to:
 
@@ -65,19 +66,9 @@ Make sure to have time for this in your estimation
 ```
 
 ## Technical Challenges
-
-### Sitecore Related
 -  Multi-Page form is not working for some reason
     -  for some wired reason the first page will be rendered fine but if you moved to the next page, the form will lose the context and all the headers and footers will disappear the style will be messed up.
 -  There is a very wired behavior in Sitecore if you changed the Submit button css class it will throw a BE null pointer exception, to fix it I had to customize the `NavigationDataModelBinder` & `SetModelBinders` and remove some if statements from the first class. `navigationData` was null.
 -  If you have a custom action inheriting from `SubmitActionBase` but you don’t have any parameters your `Execute` method will never get called, you have to override the `ExecuteAction` method, it’s another bug in Sitecore.
 -  Sitecore Form uses `data-sc-field-name` html attribute and `data-sc-field-key` to fill in the model class `FormSubmitContext` in other words to identify the field and get the value and fill the Model from the form data (request data).
 
-
-### Contact Energy Related
--  Understanding cucumber form validation without any KT
--  Sitecore uses backend form validation while cucumber used front end validation
-    -  I had to customize it to use frontend validation as it’s the current behavior
--  `data-valmsg-for` and `for` in the control-label has to be in sync with the `<input/>` value, otherwise you will get wired jquery errors.
--  `data-val="true"` this will work, `data-val="True"` this will not work
--  In TDS when you sync the items, don't check the cheackbox, right click and select all child.
