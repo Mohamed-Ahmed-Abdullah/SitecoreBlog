@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sitecore Forms Customization
-nav_order: 1
+nav_order: 2
 ---
 
 # Sitecore Forms Customization
